@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment Information</title>
+
+  <!-- HTML RUBRIC TEMPLATE -->
+
+  <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="/shared/custom_html/shared/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!--globalCampus.css containing typography standards -->
+  <link rel="stylesheet" href="/shared/HTML-Template-Library/GC Core Paced/module_templates/../assets/css/main.min.css">
+  <style>
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+    }
+
+    #rubric-responsive table {
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+      max-width: 1080px;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    #rubric-responsive thead th:first-child {
+      width: 17%;
+    }
+    #rubric-responsive thead th:last-child {
+      width: 10%;
+    }
+
+    #rubric-responsive th,
+    #rubric-responsive td,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      border: 1px solid black;
+      padding: 7px;
+    }
+
+    #rubric-responsive th,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      background-color: #f5f5f5;
+    }
+
+#rubric-responsive th {text-align: center;
+                      }
+    #rubric-responsive td,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      vertical-align: text-top;
+    }
+
+    /* Center data in "Value" column */
+    #rubric-responsive tbody > tr > :last-child {
+      text-align: center;
+    }
+
+    /* Style first column like header row in case <th> isn't used */
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      font-weight: bold;
+      text-align: center;
+    }
+
+/* right align total: text */
+      #rubric-responsive tbody > tr:last-child > :nth-child(1) {
+        font-weight: bold;
+        text-align: right;
+}
+
+    @media only screen and (max-width: 800px) {
+
+      /* Display table elements as block */
+      #rubric-responsive table,
+      #rubric-responsive thead,
+      #rubric-responsive tbody,
+      #rubric-responsive th,
+      #rubric-responsive td,
+      #rubric-responsive tr,
+      #rubric-responsive tfoot {
+        display: block;
+      }
+
+      #rubric-responsive caption {
+        display: inline-block;
+        margin: 0px auto;
+      }
+
+      /* Remove border from table and center it on screen */
+      #rubric-responsive table {
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+
+
+    /* Hide table headers (but not display: none; (for accessibility) */
+      #rubric-responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      /* Style responsive table rows */
+      #rubric-responsive tr {
+        border: 1px solid #ccc;
+      }
+
+      /* Style responsive table cells */
+      #rubric-responsive td {
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      #rubric-responsive td:before {
+      /* Bring "data-title" attribute into table cells */
+        content: attr(data-attr);
+      /* display it as inline block so it doesn't interfere with <td> */
+        display: inline-block;
+      /* make it take up it's entire "row" */
+        width: 100%;
+      /* bold font so it looks like a th */
+        font-weight: bold;
+      }
+
+  /* Remove "data-title" attribute from first child <td> cells */
+  /* this removes "Criteria" from the Total row, and will remove criteria from any <td> cells that should be <th> */
+      #rubric-responsive tbody>tr>td:first-child:before {
+          content: none;
+      }
+
+      /* Center data in "Value" column */
+      #rubric-responsive tbody > tr > :last-child {
+        text-align: left;
+      }
+
+      /* Don't display "100%" cell */
+      #rubric-responsive tr:last-child td:last-of-type {
+        display: none;
+      }
+
+      /* Add "100%" after Total:  */
+      #rubric-responsive
+        tr:last-child
+        td:first-of-type::after {
+        content: " 100%";
+      }
+      /* remove padding from last row */
+      #rubric-responsive tr:last-child > td {
+        padding: 7px;
+      }
+    }
+
+    /* Print Styles*/
+    @media print {
+      @page {
+        size: landscape;
+      }
+
+      span.rsbtn_text {
+        display: none !important;
+      }
+
+      p,
+      ul,
+      ol,
+      li,
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr,
+      tfoot {
+        font-size: 12px;
+      }
+
+      h1,
+      h2 {
+        font-size: 90%;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 80%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      ul,
+      ol {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      .d-print-none {
+        display: none;
+      }
+
+      .d-print-block {
+        display: block;
+      }
+    }
+  </style> 
+     
+  <style>
+    img {
+      float: right;
+      margin-left: 20px;
+      width: 38vw;
+    }
+@media only screen and (max-width: 800px) {
+    img {
+      float:none;
+      align: center;
+      width:100vw;
+      display: block; 
+      margin-left: auto; 
+      margin-right: auto;
+    }
+  </style>
+  </head><body><h1>BIO 315 Final Project Guidelines and Rubric</h1>
+<!--Begin copy to add more sections. Use appropriate heading tags for subsections-->
+<h2>Overview</h2>
+<p>The final project for this course is a paper that will use information regarding vegetation and bird communities to inform a conservation organization as to which of four sites to target for acquisition and preservation. That is, you will evaluate these four properties according to pre-established criteria that reflect the biodiversity found at each site. This is the sort of work that conservation groups such as the Nature Conservancy or other land trusts regularly pursue—if we have finite financial resources, how do we judge which area is most important to protect? This project will prepare you to do the kind of work that is often expected of a professional in the field of environmental science: collecting, analyzing, and synthesizing field data; interpreting and communicating the results; and relating your findings to the extant scientific literature. It will also prepare you for subsequent courses in Southern New Hampshire University’s Environmental Science degree program, including Environmental Science Research Methods.</p>
+<p>The project is supported by <strong>three milestones</strong>, which will be submitted at various points throughout the course to scaffold learning and ensure quality final submissions. These milestones will be submitted in <strong>Modules Two, Four, and Six</strong>. The instructor will provide input and possible revisions to each of these three milestones when they are submitted; these edits should be included in the final submission, which will be submitted in <strong>Module Seven.</strong></p>
+<p>In this assignment, you will demonstrate your mastery of the following course outcomes:</p>
+<ul>
+<li>Demonstrate the ability to apply scientific methods to solving problems and using the proper methods of observation and recording of scientific data</li>
+<li>Describe ecological relationships at the level of the organism, population, community, and ecosystem&nbsp;</li>
+<li>Integrate their knowledge and understanding of how their environment works, especially in regard to understanding the role of humans in a biological context</li>
+</ul>
+<!--Begin copy to add more sections. Use appropriate heading tags for subsections-->
+<h2>Prompt</h2>
+<p>You are working for an international bird conservation organization that is considering purchase of one of four parcels of land in the Central American country of Belize. You will use field data concerning bird species occurrence and abundance, as well as descriptions of plant communities found at each site to make a recommendation to the organization as to which of these land parcels to acquire. Field data will be provided for each of the four parcels at two different scales:</p>
+<ol>
+<li>Local, meaning the specific parcels being considered for purchase. Each specific parcel being considered is defined by a particular land parcel boundary.</li>
+<li>Regional, meaning the broader area surrounding each specific parcel being considered for acquisition (15-mile-diameter circles centered at Belmopan (17.146 °N, 88.729 °W), Cockscomb Basin (16.797 °N, 88.379 °W), Gallon Jug (17.561 °N, 89.044 °W), and Punta Gorda (16.165 °N, 88.883 °W)</li>
+</ol>
+<p>Since all students in this class may not be able to physically engage in actual field research for a variety of reasons, in this project you will be given field data and GIS-analyzed remote sensing information that is similar to what might actually be collected during weeks of real field work and subsequent analysis. Methods used to obtain this data will be briefly described in this document; your final paper should describe these methods and present results as though you had actually been responsible for collecting and analyzing the data. Your final project should follow the format of a standard scientific paper (Introduction, Methods, Results, Discussion, Literature Cited).&nbsp;</p>
+<p>Because of the priorities of the organization you are working for, your analysis will emphasize birds, but it should also include reference to major vegetation communities that may reasonably be expected to influence bird distribution and abundance. The primary information you will be given to work with includes:</p>
+<ol>
+<li>Species diversity indices based on single-day bird surveys conducted by teams of observers within 15-mile-diameter circles that include the four sites being considered for conservation purchase</li>
+<li>Graphical analyses summarizing the major vegetation communities present within each of the 15-mile-diameter circles</li>
+<li>Graphical analyses summarizing the major vegetation communities present within each of the actual parcels being considered for acquisition</li>
+<li>Bird survey data collected using the rapid assessment MacKinnon approach (see <span style="text-decoration: underline;"><a href="https://ezproxy.snhu.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&amp;db=asn&amp;AN=11843725&amp;site=ehost-live&amp;scope=site" target="_blank" rel="noopener" title="">O’Dea et al. 2004</a></span>) from each of the specific parcels being considered for acquisition. In other words, your data sets will reflect information collected at two different scales—<em>one regional</em> (the 15-mile diameter circles) and <em>one local</em> (the specific parcels).</li>
+</ol>
+<h2>Critical Elements</h2>
+<ul>
+<li>Include an Introduction section.</li>
+<li>Include a Methods section based on information provided in diversity_indices.pdf and veg_analyses.pdf.</li>
+<li>Create species detection line graphs for each study region based on MacKinnon data from bird_data.xls.</li>
+<li>Incorporate results provided in diversity_indices.pdf, veg_analyses.pdf, and the graph produced in Milestone Two into a brief (three-page maximum, double-spaced, 12-point font) Results section.</li>
+<li>Prepare a brief Discussion section that reviews the findings mentioned in Results and explains your recommendation as to which property would be best to acquire for conservation purposes.</li>
+<li>Prepare a Literature Cited section that includes all references that you have mentioned in your Introduction, Methods, and Discussion sections following the current APA style requirements.</li>
+</ul>
+<h2>Background and Descriptions of Data Sets</h2>
+<p>This following provides information and instructions to support you in completing each milestone and element of the final project.</p>
+<ul>
+<ol type="1">
+<li><strong>Maps:</strong> The following <span style="text-decoration: underline;"><a href="http://snhu-media.snhu.edu/files/course_repository/undergraduate/bio/bio315/belize.jpg" target="_blank" rel="noopener">map</a></span> will help you visualize the project areas:<br><br>Map showing approximate elevations of Belize, locations of major rivers, study region boundaries (15-mile-diameter circles), and local parcels being considered for conservation acquisition (solid black polygons)</li>
+<li><strong>Diversity Indices:</strong> Ecologists have devised many different indices that are used to quantitatively measure levels of biodiversity. It is important to recognize that none of these indices, by themselves, tell the “full story.” For instance, at one level it would be completely accurate to measure biodiversity simply by counting up the number of species (or genera or families) present at a particular study site; a site where S (the number of taxa) = 150 is more diverse than a site where S = 20. But this is only one way we might describe diversity. How might we compare diversity in a way that considers not only the number of species, but also the relative abundances of the different species? For example, a community composed of 50 species, each of which is equal in abundance, would be a very different community from one in which those same 50 species occurred but where one of those species was 5,000 times more abundant than each of the other 49 species. <br><br>Following are some of the more common diversity indices that you will find mentioned in the ecological literature. Remember that none of them are “perfect”; instead, each provides a slightly different perspective on the same basic question. Probably the most common indices are:</li>
+<ol type="A">
+<li>Simple counting of the total number of taxa present (S)</li>
+<li>Dominance (D), with values that range from 0 (all taxa are equally present) to 1 (one taxon dominates the community completely). Dominance<br>(D) is directly related to Simpson’s index, which = 1-D).</li>
+<li>The Shannon index (H), with values ranging from 0 (communities with only a single taxon) to high numbers (communities with many taxa, each with a few individuals)</li>
+<li>Equitability (J): This measures the evenness with which individuals are divided among the taxa present.</li>
+</ol>
+<li><strong>Analysis:</strong> The equations used to calculate these varied diversity indices are typically fairly simple and can be created easily within Excel spreadsheets, found online as add-on macros within Excel (e.g., <span style="text-decoration: underline;"><a href="https://web.archive.org/web/20151124010552/http:/web.science.uu.nl/amazon/atdn/pagina38.html" target="_blank" rel="noopener">Diversity.xla</a></span>), or calculated via free statistical software such as <span style="text-decoration: underline;"><a href="https://www.nhm.uio.no/english/research/resources/past/" target="_blank" rel="noopener">PAST</a></span> or R (<span style="text-decoration: underline;"><a href="http://www.r-project.org/" target="_blank" rel="noopener">The R Project for Statistical Computing</a></span>). These links are provided as optional resources for you to explore and learn more about the indices; they are not required for this project. Instead, to save you some time, for this exercise the four indices mentioned in the Diversity Indices section above have been calculated for you, using PAST; these results are provided in the document diversity_indices.pdf. Similarly, GIS was used to estimate the extent of major vegetation communities present within each of the actual parcels being considered for acquisition, and within the 15-mile-diameter regional circles; these results are provided in the documentveg_analyses.pdf.</li>
+<li>Data Sets: In this assignment, you are provided with four data sets that reflect the types of information you might collect if you were actually doing field work aimed at assessing bird diversity at four different sites. These data sets are based on real data collected by real people in real field settings, but in each case, the actual information has been modified for the sake of this learning experience.<br><br>Data set contained in the Excel workbook bird_data.xls. Separate worksheets named as <em>Belmopan – 15 mi circle, Belmopan – MacKinnon, Gallon Jug – 15 mi circle, Gallon Jug – MacKinnon, Cockscomb Basin – 15 mi circle, Cockscomb Basin – MacKinnon, Punta Gorda – 15 mi circle, Punta Gorda – MacKinnon, and Graph</em>. See <span style="text-decoration: underline;"><a href="http://ezproxy.snhu.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&amp;db=asn&amp;AN=11843725&amp;site=ehost-live&amp;scope=site" target="_blank" rel="noopener">O’Dea et al</a></span>. (pp. 55–56) for a description of how MacKinnon list data is collected. Basically, the idea is simple—you explore an area of interest and record the first 10 (or however many you decide; in this example the number is 10) species that you encounter. Then you do the same thing again, recording observations until you reach a total of 10 species. Then you do it again, and again, and again—in this example, on 15 different surveys.<br><br>Eventually you are able to produce a data set that shows the number of new (never-before-encountered during your survey efforts) species for each of the 15 survey dates and use this to produce a table showing the cumulative number of species detected by date. For this exercise, you are provided with MacKinnon data collected on 15 dates within each of the parcels being considered for conservation purchase. See MacKinnon_data_instructions.pdf for an explanation of how to calculate and fill in the data required in the worksheet <em>Graphs</em>.</li>
+</ol>
+</ul>
+<h2>Milestones</h2>
+<p>As noted above, you will complete three milestones during the course. The work you produce for the milestones will serve as first drafts of the critical elements of your final project. Following are descriptions of the three milestones, including the critical elements associated with each milestone. The critical elements will serve as the basis for the rubric that will be used to assess your final project.</p>
+<p><span style="text-decoration: underline;">Milestone One</span>: <em>Data Exploration and Preparation for Analysis</em><br>In this milestone, due as part of <strong>Module Two</strong>, you will submit drafts of two critical elements of your final project:</p>
+<ol>
+<li>A brief (two-page maximum, double-spaced, 12-point font) Introduction</li>
+<li>A brief (two-page maximum, double-spaced, 12-point font) Methods section based on information provided in diversity_indices.pdf and MacKinnon data in bird_data.xls andveg_analyses.pdf</li>
+</ol>
+<p>In order to complete those critical elements, you will need to first:</p>
+<ul>
+<li>Familiarize yourself with the data provided in the Excel workbooks bird_data.xls and the documents diversity indices.pdf and veg_analyses.pdf</li>
+<li>Read and understand <span style="text-decoration: underline;"><a href="https://ezproxy.snhu.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&amp;db=asn&amp;AN=11843725&amp;site=ehost-live&amp;scope=site" target="_blank" rel="noopener" title="">O’Dea et al</a></span>. (2004), especially pages55–56</li>
+</ul>
+<p><strong>This milestone will be graded using the Milestone One Rubric.</strong></p>
+<p><span style="text-decoration: underline;">Milestone Two</span>: <em>Quantitative and Graphical Analysis</em><br>In this milestone, due as part of <strong>Module Four</strong>, you will submit a draft of one critical element of your final project: Create species detection line graphs for each study region based on MacKinnon data from bird_data.xls. See the instructions in MacKinnon_data_instructions.pdf.</p>
+<p><strong>This milestone will be graded using the Milestone Two Rubric.</strong></p>
+<p><span style="text-decoration: underline;">Milestone Three</span>: <em>Results, Discussion, and Literature Cited Sections</em><br>In this milestone, due as part of <strong>Module Six</strong>, you will submit drafts of three critical elements of your final project:</p>
+<ol>
+<li>Incorporate results provided in diversity_indices.pdf, veg_analyses.pdf, and the graph produced in Milestone Two into a brief (three-page maximum, double-spaced, 12-point font) Results section.</li>
+<li>Prepare a brief (two-page maximum, double-spaced, 12-point font) Discussion section that reviews the findings mentioned in Results and explains your recommendation as to which property would be best to acquire for conservation purposes.</li>
+<li>Prepare a Literature Cited (References) section that includes all references that you have mentioned in your Introduction, Methods, and Discussion sections following the current APA style requirements.</li>
+</ol>
+<p><strong>This milestone will be graded using the Milestone Three Rubric.</strong></p>
+<p><span style="text-decoration: underline;">Final Project Submission</span>: <em>Final Report</em><br>Due as part of <strong>Module Seven</strong>, your final project consists of combining the elements produced for Milestones One, Two, and Three (with any revisions suggested after submission of those milestones) into a final document. This combination of sections will probably involve some final editing, clean-up, and cross-checking.</p>
+<p><strong>The final project will be graded using the Final Project Rubric (below).</strong></p>
+<!--End copy to add section->
+<!--Do NOT change text for "What to Submit" heading-->
+<h2>What to Submit</h2>
+<p>Written components of this project will follow the professionally appropriate formatting. The final report (Introduction, Methods, Results, Discussion, and Literature Cited) should total 10–15 pages in length (including figures, tables, and references following the current APA style requirements).</p>
+<h2 style="text-align: center;">Final Project Rubric</h2>
+<div id="rubric-responsive">
+<table style="width: 93.9675%;">
+<thead>
+<tr><!--Do NOT change text for "Criteria" column heading-->
+<th class="table-borderless" scope="col" style="width: 16.9586%;">Criteria</th>
+<th scope="col" style="width: 18.256%;">Exemplary (100%)</th>
+<th scope="col" style="width: 18.256%;">Proficient (85%)</th>
+<th scope="col" style="width: 18.256%;">Needs Improvement(55%)</th>
+<th scope="col" style="width: 18.256%;">Not Evident (0%)</th>
+<!--Do NOT change text for "Value" column heading-->
+<th scope="col" style="width: 10.0084%;">Value</th>
+</tr>
+</thead>
+<tbody><!--Begin copy to add ROWS. Update "td data-attr=" to match table headings exactly before copying and pasting.-->
+<tr>
+<th scope="row" style="width: 16.9586%;">Introduction</th>
+<td data-attr="Exemplary (100%)" style="width: 18.256%;">Meets all of the “Proficient” criteria and is concise</td>
+<td data-attr="Proficient (85%)" style="width: 18.256%;">Includes a descriptive title and clear description of the question being addressed</td>
+<td data-attr="Needs Improvement(55%)" style="width: 18.256%;">Lacks a descriptive title and/or description of the question being addressed is present but awkwardly phrased</td>
+<td data-attr="Not Evident (0%)" style="width: 18.256%;">No description of the question being addressed</td>
+<td data-attr="Value" style="width: 10.0084%;">10</td>
+</tr>
+<tr>
+<th scope="row" style="width: 16.9586%;">Methods Section</th>
+<td data-attr="Exemplary (100%)" style="width: 18.256%;">Meets all of the “Proficient” criteria; no need for additional editing</td>
+<td data-attr="Proficient (85%)" style="width: 18.256%;">Clear, complete, and accurate descriptions are provided of locations, methods of data collection, and basic analysis techniques (including software). Wording appropriate for technical writing (past tense, not wordy), could</td>
+<td data-attr="Needs Improvement(55%)" style="width: 18.256%;">Some or all descriptions of locations, methods of data collection, and/or basic analysis techniques(including software) are unclear, incomplete, or inaccurate</td>
+<td data-attr="Not Evident (0%)" style="width: 18.256%;">No descriptions of the location and methods used to collect the data and/or identification of the software used to analyze the data are provided</td>
+<td data-attr="Value" style="width: 10.0084%;">15</td>
+</tr>
+<tr>
+<th scope="row" style="width: 16.9586%;">Species Detection Line Graphs</th>
+<td data-attr="Exemplary (100%)" style="width: 18.256%;">All 4 of the line graphs (all locations) are accurate</td>
+<td data-attr="Proficient (85%)" style="width: 18.256%;">2-3 of the line graphs are accurate</td>
+<td data-attr="Needs Improvement(55%)" style="width: 18.256%;">Only 1 of the line graphs is accurate</td>
+<td data-attr="Not Evident (0%)" style="width: 18.256%;">No line graphs are provided</td>
+<td data-attr="Value" style="width: 10.0084%;">15</td>
+</tr>
+<tr>
+<th scope="row" style="width: 16.9586%;">Results Section</th>
+<td data-attr="Exemplary (100%)" style="width: 18.256%;">Meets all of the “Proficient” criteria. Conforms to current APA&nbsp;guidelines. Does not slide into discussion or interpretation</td>
+<td data-attr="Proficient (85%)" style="width: 18.256%;">Results section includes all of the major elements(species detection line graphs, mention of diversity indices, mention of vegetation/land use characteristics), and presentation of these elements is clear and logical. Mostly conforms to current APA guidelines.</td>
+<td data-attr="Needs Improvement(55%)" style="width: 18.256%;">Results section omits some of the major elements(species detection line graphs, mention of diversity indices, mention of vegetation/land use characteristics), and/or logical presentation of these elements needs improvement (or includes evaluations and/or</td>
+<td data-attr="Not Evident (0%)" style="width: 18.256%;">Results section missing all of the major elements (species detection line graphs, mention of diversity indices, mention of vegetation/land use characteristics)</td>
+<td data-attr="Value" style="width: 10.0084%;">20</td>
+</tr>
+<tr>
+<th scope="row" style="width: 16.9586%;">Discussion Section</th>
+<td data-attr="Exemplary (100%)" style="width: 18.256%;">Meets all of the “Proficient” criteria and suggests logical areas for additional investigation or research that would better inform the rankings and recommendations</td>
+<td data-attr="Proficient (85%)" style="width: 18.256%;">Criteria used to evaluate the parcels, the evaluations themselves, and associated recommendations are logical and well-supported by the results. Demonstrates ability to synthesize information from different sources</td>
+<td data-attr="Needs Improvement(55%)" style="width: 18.256%;">Criteria to evaluate the parcels, the evaluations themselves, and/or associated recommendations are incomplete or not well supported by the results</td>
+<td data-attr="Not Evident (0%)" style="width: 18.256%;">Discussion section not provided</td>
+<td data-attr="Value" style="width: 10.0084%;">20</td>
+</tr>
+<tr>
+<th scope="row" style="width: 16.9586%;">Literature Cited (References)</th>
+<td data-attr="Exemplary (100%) " style="width: 18.256%;">More than two scholarly articles that are clearly related to the research project are referenced, and all references and citations conform to current APA guidelines.</td>
+<td data-attr="Proficient (85%)" style="width: 18.256%;">The paper references at least two scholarly articles that are clearly related to the research project. Most references and citations conform to current APA guidelines.</td>
+<td data-attr="Needs Improvement(55%)" style="width: 18.256%;">Fewer than two scholarly articles that are clearly related to the research project are referenced and/or few references and citations conform to current APA guidelines.</td>
+<td data-attr="Not Evident (0%)" style="width: 18.256%;">No relevant scholarly articles are referenced</td>
+<td data-attr="Value" style="width: 10.0084%;">10</td>
+</tr>
+<tr>
+<th scope="row" style="width: 16.9586%;">Writing (Mechanics/ Citations)</th>
+<td data-attr="Exemplary (100%) " style="width: 18.256%;">No errors related to organization, grammar and style, and citations</td>
+<td data-attr="Proficient (85%)" style="width: 18.256%;">Minor errors related to organization, grammar and style, and citations</td>
+<td data-attr="Needs Improvement(55%)" style="width: 18.256%;">Some errors related to organization, grammar and style, and citations</td>
+<td data-attr="Not Evident (0%)" style="width: 18.256%;">Major errors related to organization, grammar and style, and citations</td>
+<td data-attr="Value" style="width: 10.0084%;">10</td>
+</tr>
+<!--End copy to add ROWS--> <!--Paste additional ROWS here.-->
+<tr><!--Update "colspan" if columns are removed. Number should equal 1 less than total number of columns.-->
+<td colspan="5" style="text-align: right; width: 89.9826%;">Total:</td>
+<td style="width: 10.0084%;">100%</td>
+</tr>
+</tbody>
+</table>
+</div></body></html>
